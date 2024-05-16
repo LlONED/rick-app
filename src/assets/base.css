@@ -1,0 +1,36 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --white: #ffffff;
+  --dark: #202329;
+
+  --gray: #3c3e44;
+  --gray-mute: #9e9e9e;
+  --gray-blue: #272b33;
+
+  --green: #55cc44;
+  --orange: #ff9800;
+  --red: #ff1100;
+}
+
+/* semantic color variables for this project */
+:root {
+  --color-background: var(--gray-blue);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 105vh;
+  color: var(--color-text);
+  background: var(--color-background);
+
+  font-family: -apple-system, "BlinkMacSystemFont", "Segoe UI", "Roboto",
+    "Helvetica", "Arial", sans-serif, "Apple Color Emoji", "Segoe UI Emoji",
+    "Segoe UI Symbol";
+}
