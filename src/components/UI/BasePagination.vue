@@ -21,6 +21,7 @@ const emit = defineEmits(["prev", "next"]);
 <style scoped>
 .pagination {
   display: flex;
+  align-items: center;
   gap: 0.4rem;
   color: var(--white);
 }
