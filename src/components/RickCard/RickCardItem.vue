@@ -9,7 +9,12 @@ const { card } = defineProps({
 <template>
   <article class="card">
     <div class="image-wrapper">
-      <img :src="card.image" :alt="card.image" class="image" />
+      <img
+        @load="$event.target.classList.remove('loading')"
+        :src="card.image"
+        :alt="card.name"
+        class="image loading"
+      />
     </div>
 
     <section class="info-wrapper">
@@ -55,7 +60,6 @@ h2 {
   overflow: hidden;
   background: var(--gray);
   border-radius: 0.4rem;
-  margin: 0.75rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 6px -1px,
     rgba(0, 0, 0, 0.06) 0px 2px 4px -1px;
 }
@@ -80,6 +84,11 @@ h2 {
   transition: opacity 0.5s ease 0s;
   object-position: center center;
   object-fit: cover;
+}
+
+.image.loading {
+  opacity: 0;
+  transition: opacity 0.5s ease 0s;
 }
 
 .info-wrapper {
