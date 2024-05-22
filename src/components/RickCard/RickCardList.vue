@@ -20,6 +20,7 @@ const { cards } = defineProps({
   justify-content: center;
   align-items: center;
   flex-wrap: wrap;
+  gap: 1rem;
   max-width: 1920px;
 }
 </style>
